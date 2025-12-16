@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPU Scheduling Numericals</title>
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #7f53ac, #647dee);
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .numerical-image {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .numerical-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+      animation: pulse 1s infinite;
+    }
+
+    .image-caption {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: #f0e6ff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      margin-top: 8px;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1.03);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .grid-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .left-column {
+      width: 100%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    /* Back Button Styles */
+    .back-button {
+      background-color: #f0e6ff;
+      color: #7f53ac;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    .back-button:hover {
+      background-color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-button:active {
+      transform: translateY(1px);
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .content-wrapper {
+        align-items: center;
+      }
+      .left-column {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    h1 {
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <header class="py-10">
+    <h1 class="text-4xl font-bold">CPU Scheduling Numericals</h1>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="grid-section">
+      <!-- Left Column with FCFS and MLQ -->
+      <div class="left-column">
+        <!-- FCFS -->
+        <div class="text-center">
+          <a href="https://youtu.be/vlc0Ea4ID9s?si=xzGLljM5Zt0WFuor" target="_blank">
+            <img src="Screenshot 2025-06-22 163222.png" alt="FCFS" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">FCFS Numerical</p>
+        </div>
+
+        <!-- Multi-Level Queue -->
+        <div class="text-center">
+          <a href="https://youtu.be/1S_CekP8lMw?si=DaFqWqxw8GBF6oJY" target="_blank">
+            <img src="Screenshot 2025-06-22 163333.png" alt="MLQ" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">Multi-Level Queue Numerical</p>
+        </div>
+      </div>
+
+      <!-- Right Column with other images -->
+      <div class="right-grid">
+        <!-- SJF -->
+        <div class="text-center">
+          <a href="https://youtu.be/Bm2EmV5QBzg?si=nxmIXyqmQmK2mjdw" target="_blank">
+            <img src="Screenshot 2025-06-22 163238.png" alt="SJF" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">SJF Numerical</p>
+        </div>
+
+        <!-- SRTF -->
+        <div class="text-center">
+          <a href="https://youtu.be/7O3EcvobP7s?si=9nN563xf2Tkv_gzC" target="_blank">
+            <img src="Screenshot 2025-06-22 163151.png" alt="SRTF" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">SRTF Numerical</p>
+        </div>
+
+        <!-- Round Robin -->
+        <div class="text-center">
+          <a href="https://youtu.be/6PEyXwdxeIc?si=ZhmlrNtp15S_aNBp" target="_blank">
+            <img src="Screenshot 2025-06-22 163206.png" alt="Round Robin" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">Round Robin Numerical</p>
+        </div>
+
+        <!-- LJF Scheduling -->
+        <div class="text-center">
+          <a href="https://youtu.be/FRvqyY2KtAk?si=GjCEReNCWGd4vMXG" target="_blank">
+            <img src="Screenshot 2025-06-22 180513.png" alt="LJF" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">LJF Numerical</p>
+        </div>
+
+        <!-- Primitive Priority -->
+        <div class="text-center">
+          <a href="https://youtu.be/A860nFJ0FsA?si=_1E1hg2ENpJh-_jq" target="_blank">
+            <img src="Screenshot 2025-06-22 163135.png" alt="Primitive Priority" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">Pre-emptive Priority Numerical</p>
+        </div>
+        <!-- Non-Primitive Priority -->
+        <div class="text-center">
+          <a href="https://youtu.be/OSYGKeTIDLQ?si=5xAdRElKPBAy3wtA" target="_blank">
+            <img src="Screenshot 2025-06-22 175822.png" alt="Non-Primitive Priority" class="numerical-image w-full mb-2" />
+          </a>
+          <p class="image-caption">Non-Pre-emptive Priority Numerical</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="code.html" class="back-button">← Back to Home</a>
+  </footer>
+
+</body>
+</html>
